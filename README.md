@@ -22,3 +22,7 @@ Using Python's OpenCV library, we can implement Template Matching. OpenCV suppor
 ![1_MouMPPYnxm6sLIS971lMqw](https://user-images.githubusercontent.com/78133830/111910418-de56fb00-8a93-11eb-8be9-28ef3ee244e7.png)
 
 The template patch is slid over the input with this matrix and it determines a score that will indicate whether there is a match. TM_CCOEFF_NORMED finds the average value of the template and matches it to the average of the input. A score of 1 is a perfect match, -1 is a bad match and 0 is neutral.
+
+## Limitations
+
+As the user has to provide their own target image (which has already revealed the location of Waldo) it doesn't make sense as to why we need to create a program to find Waldo in the first place. However, the main point of this project is to showcase the methods in which image recognition is possible. For our project we have provided 1 example, showcase the basic methodology in which image recognition is achieved. In reality, the use of machine learning and larger data samples will expand the capabilities of this project.

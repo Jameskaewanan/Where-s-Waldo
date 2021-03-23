@@ -21,7 +21,16 @@ Using Python's OpenCV library, we can implement Template Matching. OpenCV suppor
 ***CCOEFF Correlation Coefficient***
 ![1_MouMPPYnxm6sLIS971lMqw](https://user-images.githubusercontent.com/78133830/111910418-de56fb00-8a93-11eb-8be9-28ef3ee244e7.png)
 
+The **Source Image** is greyscaled to reduce complexity in calculations
+
+
 The template patch is slid over the input with this matrix and it determines a score that will indicate whether there is a match. TM_CCOEFF_NORMED finds the average value of the template and matches it to the average of the input. A score of 1 is a perfect match, -1 is a bad match and 0 is neutral.
+
+The ∑x″,y″T(x″,y″) in the TM_CCOEFF method is used to make the template and image zero mean and to make the dark parts of the image negative values and the bright parts of the image positive values.
+
+This means that when bright parts of the template and image overlap we'll get a positive value in the dot product, as well as when dark parts overlap with dark parts that means the result is a positive score for both bright parts matching and dark parts matching.
+
+When we have dark on template and bright on image we get a negative value. And when when have bright on template and dark on image we also get a negative value. This indicates that negative scores are for mismatches
 
 ## Limitations
 
